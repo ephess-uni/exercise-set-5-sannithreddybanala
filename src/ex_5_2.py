@@ -22,5 +22,5 @@ if __name__ == "__main__":
     OUTFILE = root_dir / "outputs" / "ex_5_2-processed.csv"
     input_data = np.loadtxt(INFILE)
     processed = (input_data - input_data.mean(axis=0)) / input_data.std(axis=0)
-    os.makedir(root_dir / "outputs", exist_ok=True)
+    os.makedirs(root_dir / "outputs", exist_ok=True)
     np.savetxt(OUTFILE, processed, fmt='%.2e')
